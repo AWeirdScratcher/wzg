@@ -140,7 +140,7 @@ Nice, now we have a working component.
 
 Next up, let's jump right back to the **`main.pyx`** file:
 
-```py
+```pyx
 from wzg import Wzg
 
 # with dollar sign as prefix,
@@ -184,6 +184,78 @@ app.render(
 # mappingResult::{"result": {"foundErrors":0,"userImports":2,"ellasped":"300ms"}}
 # mappingKeyIsValid::true
 # mappingKey::ZTNiNGYwNzAtMmU5NC00Yzk4LTliOTktY2VlY2E1NzFkNWE5NGQ4NzUxYmUtMTZhNy00MDljLThkZjMtMTIwZjMyNTBhZWVk
+```
+
+Moreover, another JSX file appears (but in a random name):
+
+```jsx
+// Code generated with Wzg
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+const WzgApplication = () => ( // start
+  <div id="b4f92452-6d04-4e0a-a082-e593bbe399f8">Good Morning!</div>
+) // end
+
+const root = document.querySelector('#the-root');
+
+ReactDOM.createRoot(root).render(
+  <React.StrictMode>
+    <WzgApplication />
+  </React.StrictMode>
+)
+```
+
+  </p>
+</details>
+
+For the `index.html` file, the script import is required as follow:
+
+```html
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Good Morning Website</title>
+    <!-- Add the following keyword in order to work! -->
+    
+    {DEV_MODE}
+    
+    <!-- DEV_MODE for development; PR_MODE for production -->
+  </head>
+  <body>
+    <div id="the-root"></div>
+    <!-- Just use the keyword, then wzg will do it for you! -->
+    {SCRIPT}
+  </body>
+</html>
+```
+
+<details>
+  <summary><b>Converted File</b></summary>
+  <p>
+
+Here's the converted (parsed) HTML file:
+
+```html
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Good Morning Website</title>
+    <!-- Add the following keyword in order to work! -->
+    
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    
+    <!-- DEV_MODE for development; PR_MODE for production -->
+  </head>
+  <body>
+    <div id="the-root"></div>
+    <!-- Just use the keyword, then wzg will do it for you! -->
+    <script type="text/babel" src="523e03baa35f.jsx"></script>
+  </body>
+</html>
 ```
 
   </p>
