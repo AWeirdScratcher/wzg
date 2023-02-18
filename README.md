@@ -125,7 +125,7 @@ EXPORTS = {"default": App}
 # mappingKey::MWE5ODM4NzctZDg4NS00NTA2LTllZjgtMThhOWFlYjg0NGQ0MjQ2ZDE4YWEtOGU0MS00YzdmLTljMTUtZjNlMzFkZTJiYjYw
 ```
 
-...along with another file named "__init__.py":
+...along with another file named "\_\_init\_\_.py":
 
 ```py
 from .App import EXPORTS as _App_EXPORTS
